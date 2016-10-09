@@ -40,7 +40,7 @@
 
    在文件末尾添加下列语句
 
-   `# enable jdk environment`
+     `# enable jdk environment`
 
      `export JAVA_HOME=/usr/lib/java/jdk8`
 
@@ -54,13 +54,13 @@
 
     `source ~/.bashrc`
 
- 1. 配置默认JDK
+  1. 配置默认JDK
 
    `$ sudo update-alternatives --install /usr/bin/java java /usr/lib/java/jdk8/bin/java 300`
 
    `$ sudo update-alternatives --install /usr/bin/javac javac /usr/lib/java/jdk8/bin/javac 300`
 
- 1. 查看当前各种JDK版本和配置
+  1. 查看当前各种JDK版本和配置
 
    `$ sudo update-alternatives --config java`
 
