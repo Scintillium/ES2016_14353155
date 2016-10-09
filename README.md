@@ -30,13 +30,13 @@
 
   1. 将jdk重命名位jdk8  
 
-   `$ cd /usr/lib/java`
+    `$ cd /usr/lib/java`
 
-   `$ sudo mv jdk1.8.0_40/ jdk8`
+    `$ sudo mv jdk1.8.0_40/ jdk8`
 
   1. 配置环境变量
 
-   `gedit ~/.bashrc `
+    `gedit ~/.bashrc `
 
    在文件末尾添加下列语句
 
