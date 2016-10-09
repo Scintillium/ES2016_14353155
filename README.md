@@ -167,3 +167,7 @@
 
 
 ## Experimental experience
+
+* Experiment 1
+
+  这次实验主要熟悉和巩固了一下markdown语法和git的使用，具体参考[廖雪峰](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)老师的教程
