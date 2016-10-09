@@ -38,7 +38,7 @@
 
     `gedit ~/.bashrc `
 
-   在文件末尾添加下列语句
+    在文件末尾添加下列语句
 
      `# enable jdk environment`
 
@@ -52,19 +52,19 @@
 
     保存并且退出，运行下列语句使得更改生效
 
-    `source ~/.bashrc`
+     `source ~/.bashrc`
 
   1. 配置默认JDK
 
-    `$ sudo update-alternatives --install /usr/bin/java java /usr/lib/java/jdk8/bin/java 300`
+     `$ sudo update-alternatives --install /usr/bin/java java /usr/lib/java/jdk8/bin/java 300`
 
-    `$ sudo update-alternatives --install /usr/bin/javac javac /usr/lib/java/jdk8/bin/javac 300`
+     `$ sudo update-alternatives --install /usr/bin/javac javac /usr/lib/java/jdk8/bin/javac 300`
 
   1. 查看当前各种JDK版本和配置
+ 
+     `$ sudo update-alternatives --config java`
 
-    `$ sudo update-alternatives --config java`
-
-   ![JDK版本](https://raw.githubusercontent.com/Scintillium/Res/master/DOL-RES/jdk.png)
+    ![JDK版本](https://raw.githubusercontent.com/Scintillium/Res/master/DOL-RES/jdk.png)
 
 * 下载相关文件
 
@@ -84,31 +84,31 @@
 
    解压systemc
 
-   `tar -zxvf systemc-2.3.1.tgz`
+  `tar -zxvf systemc-2.3.1.tgz`
 
 * 编译systemc
 
   解压后进入systemc-2.3.1的目录下
 
-  `$	cd systemc-2.3.1`
+    `$	cd systemc-2.3.1`
 
   新建一个临时文件夹objdir
 
-  `$	mkdir objdir`
+    `$	mkdir objdir`
 
   进入该文件夹objdir
 
-  `$	cd objdir`
+    `$	cd objdir`
 
    运行configure(能根据系统的环境设置一下参数，用于编译)
 
-   `$	../configure CXX=g++ --disable-async-updates`
+    `$	../configure CXX=g++ --disable-async-updates`
 
     ![conffigure](https://raw.githubusercontent.com/Scintillium/Res/master/DOL-RES/systemc.png)
 
     编译
 
-    `sudo make install`
+    `$ sudo make install`
 
     然后查看文件目录如下
 
