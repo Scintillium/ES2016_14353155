@@ -87,7 +87,9 @@ http://www.tik.ee.ethz.ch/~shapes/schema/processnetwork.xsd" name="example2">
     </target>
   </connection>
 
-</processnetwork> ```
+</processnetwork>
+
+```
 
 其中使用了三个iterator，依次为square，各个组件之间的channel，以及从一个square到另一个square的connection，都是会重复使用的部分。而其中迭代器根据N的大小使用N次，所以只要将N的值从3改为2即可。
 
