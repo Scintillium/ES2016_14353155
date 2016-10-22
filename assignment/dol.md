@@ -130,3 +130,7 @@ int square_fire(DOLProcess *p) {
 DOT圖並未發生改變。
 
 ![example1](https://raw.githubusercontent.com/Scintillium/Res/master/DOL-RES/example1-dot.png)
+
+### 感想
+
+修改代碼的時候最好照着dot來理解，將代碼各個部分和dot的各個部分意義對應，才好理解代碼的思想和解決方法，並根據其來做出相應的修改，比起光看代碼來要事半功倍，畢竟源代碼項目繁多且十分雜亂，不易於閱讀。
