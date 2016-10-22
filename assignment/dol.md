@@ -92,3 +92,39 @@ http://www.tik.ee.ethz.ch/~shapes/schema/processnetwork.xsd" name="example2">
 其中使用了三个iterator，依次为square，各个组件之间的channel，以及从一个square到另一个square的connection，都是会重复使用的部分。而其中迭代器根据N的大小使用N次，所以只要将N的值从3改为2即可。
 
 dot图如下
+
+![example2](https://raw.githubusercontent.com/Scintillium/Res/master/DOL-RES/example2-dot.png)
+
+### 任务二 修改example1的代码使得其输出三次方数
+
+example的运算在square中执行
+
+代码如下
+
+
+
+```c
+int square_fire(DOLProcess *p) {
+    float i;
+
+    if (p->local->index < p->local->len) {
+        DOL_read((void*)PORT_IN, &i, sizeof(float), p);
+        i = i*i*i;
+        DOL_write((void*)PORT_OUT, &i, sizeof(float), p);
+        p->local->index++;
+    }
+
+    if (p->local->index >= p->local->len) {
+        DOL_detach(p);
+        return -1;
+    }
+
+    return 0;
+}
+
+```
+很容易发现在DOL_read和DOL_write中有i的累乘操作，这里我已经将i = i * i；改爲i = i * i * i ;從而實現輸出三次方數。
+
+DOT圖並未發生改變。
+
+![example1](https://raw.githubusercontent.com/Scintillium/Res/master/DOL-RES/example1-dot.png)
