@@ -6,7 +6,7 @@
 
 
 ```xml
- <?xml version="1.0" encoding="UTF-8"?> `
+ <?xml version="1.0" encoding="UTF-8"?>
  < processnetwork xmlns="http://www.tik.ee.ethz.ch/~shapes/schema/PROCESSNETWORK" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tik.ee.ethz.ch/~shapes/schema/PROCESSNETWORK
 http://www.tik.ee.ethz.ch/~shapes/schema/processnetwork.xsd" name="example2">
 
