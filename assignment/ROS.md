@@ -34,3 +34,35 @@ source ~/.bashrc`
 `sudo apt-get install python-rosinstall`
 
 到此ROS安装完毕。
+
+### Cartpgrapher 的安装
+
+不多说，直接贴代码，看不懂
+
+```
+# Install wstool and rosdep.
+sudo apt-get update
+sudo apt-get install -y python-wstool python-rosdep ninja-build
+
+# Create a new workspace in 'catkin_ws'.
+mkdir catkin_ws
+cd catkin_ws
+wstool init src
+
+# Merge the cartographer_ros.rosinstall file and fetch code for dependencies.
+wstool merge -t src https://raw.githubusercontent.com/googlecartographer/cartographer_ros/master/cartographer_ros.rosinstall
+wstool update -t src
+
+# Install deb dependencies.
+rosdep init
+rosdep update
+rosdep install --from-paths src --ignore-src --rosdistro=${ROS_DISTRO} -y
+
+# Build and install.
+catkin_make_isolated --install --use-ninja
+source install_isolated/setup.bash
+```
+
+网络出了点问题，所以跑demons没做完，以下是2d过程中的截图
+
+![2D](https://raw.githubusercontent.com/Scintillium/Res/master/DOL-RES/2D.png)
